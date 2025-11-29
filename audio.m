@@ -1,6 +1,6 @@
 % Experiment: To remove high-frequency noise using FIR LPF (for audio signal)
 
-[x, Fs] = audioread('car-audio.mp3');
+[x, Fs] = audioread('car-audio.mp3'); // original audio signal
 
 t = (0:length(x)-1)/Fs;
 figure;
@@ -29,4 +29,4 @@ subplot(4,1,3);
 plot(t(1:Fs), r(1:Fs));
 title('Filtered Audio Signal');
 
-audiowrite('car-audio.wav', r, Fs);
+audiowrite('car-audio.wav', r, Fs); // filtered audio signal
